@@ -285,7 +285,7 @@ inline void program_init(Parg& pg)
   }});
 
   pg.info({"Files", {
-    {"Config Directory (DIR)", "${HOME}/.peaclock"},
+    {"Config Directory (DIR)", "${XDG_CONFIG_HOME}/peaclock"},
     {"History Directory", "DIR/history"},
     {"Config File", "DIR/config"},
     {"Command History File", "DIR/history/command"},

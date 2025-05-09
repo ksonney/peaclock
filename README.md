@@ -151,7 +151,7 @@ The included shell script will install the project in release mode using the `in
 ```
 
 ## Configuration
-Config Directory (DIR): `${HOME}/.peaclock`  
+Config Directory (DIR): `${XDG_CONFIG_HOME}/peaclock`  
 History Directory: `DIR/history`  
 Config File: `DIR/config`  
 Command History File: `DIR/history/command`
@@ -168,16 +168,16 @@ Each command must be on its own line. Lines that begin with the
 `#` character are treated as comments.
 
 If you want to permanently use a different config directory,
-such as `~/.config/peaclock`, add the following line to your shell profile:
+such as `~/.peaclock`, add the following line to your shell profile:
 ```sh
-alias peaclock="peaclock --config-dir ~/.config/peaclock"
+alias peaclock="peaclock --config-dir ~/.peaclock"
 ```
 
 The following shell commands will create the config directory
 in the default location and copy over the example config file:
 ```sh
-mkdir -pv ~/.peaclock
-cp -uv ./cfg/default ~/.peaclock/config
+mkdir -pv ~/.config/peaclock
+cp -uv ./cfg/default ~/.config/peaclock/config
 ```
 
 Several config file examples can be found in the `./cfg` directory.

@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
       // default to '~/.peaclock'
       fs::path config_dir {pg.find("config-dir") ?
         pg.get<fs::path>("config-dir") :
-        fs::path(OB::Term::env_var("HOME") + "/." + pg.name())};
+        fs::path(OB::Term::env_var("XDG_CONFIG_HOME") + "/" + pg.name())};
 
       if (config_dir != "NONE" &&
         fs::exists(config_dir) && fs::is_directory(config_dir))
